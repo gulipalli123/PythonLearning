@@ -77,4 +77,30 @@ print(delhi._asdict())                                                 #_asdict(
 #Tuples role as an immutable variant of the list type
 
 # When using a tuple as an immutable variation of list, it helps to know how similar they actually are.
-#
+# Tuple supports all list methods that do not involve adding or removing items
+# methods and atrributes found in list or tuple
+#|   method                 | list  | tuple| Description     |
+#| s.__add__(s2)            | yes   | yes  | s + s2 --concatenation |
+#| s.__iadd__(s2)           |yes    | no   |  s +=s2 -- in-place concatenation   |
+#| s.append(e)              |yes    | no   | append one element after last    |
+#| s.clear()                |yes    | no   | delete all items     |
+#| s.__contains(e)          |yes    | yes  | e in s    |
+#| s.copy()                 |yes    | no   | Shallow copy of the list    |
+#|s.count(e)                |yes    | yes  | count occurences of an element     |
+#|s.__delitem__(p)          |yes    | no   |  remove item at position p    |
+#|s.extend(it)              |yes    | no   |  Append items from iterable it   |
+#|s.__getitem__(p)          |yes    | yes  |  Get item at position p    |
+#|s.__getnewargs__()        | no    | yes  |. Support for optimized serialization with pickle     |
+#|s.index(e)                |yes    | yes  |. Find position of first occurrence of e     |
+#|s.insert(p, e)            |yes    | no   | Insert element e before the item at position p     |
+#|s.__iter__()              |yes    | yes  | Get iterator     |
+#|s.__len__()               |yes    | yes  | len(s) - number of items     |
+#|s.__mul__(n)              |yes    | yes  | s * n -- repeated concatenation     |
+#|s.__imul__(n)             |yes    | no   | s *=n -- in-place repeated concatenation     |
+#|s.__rmul__(n)             |yes    | yes  | n * s -- reversed repeated concatenation     |
+#|s.pop([p])                |yes    | no   | Remove and return last item or item at optional position p    |
+#|s.remove(e)               |yes    | no   | Remove first occurrence of element e by value     |
+#|s.reverse()               |yes    | no   | reverse thew order of the items in place     |
+#|s.__reversed__()          |yes    | no   | Get iterator to scan items from last to first     |
+#|s.__setitem__(p, e)       |yes    | no   | s[p] = e - put e in position p, overwriting existing item     |
+#|s.sort([key], [reverse])  |yes    | no   | Sort items in place with optional keyword arguments key and reverse     |
